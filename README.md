@@ -96,3 +96,7 @@ conda activate ci
 conda install pytorch torchvision cpuonly -c pytorch -y
 conda install -c conda-forge matplotlib jupyter tqdm ipython pandas scikit-learn -y
 ```
+
+### Acknowledgement
+
+We acknowledge support from the NSF Division of Graduate Education NRT Program through Award Number 2243526 for the development of the resources in this repository.
