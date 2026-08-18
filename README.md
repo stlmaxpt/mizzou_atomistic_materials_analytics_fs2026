@@ -1,102 +1,30 @@
-# mizzou_atomistic_materials_analytics_sp2025
+# ChE 8615: Atomistic Materials Analytics
 
-Atomistic Materials Analytics class at the University of Missouri, Spring 2025
+Course notebooks for the University of Missouri. The `main` branch contains the current course release; `2025SP` preserves the Spring 2025 endpoint and `2026FS` preserves the Fall 2026 development endpoint.
 
-## Setup: Environment, Windows
+## Quick start
 
-### [Miniconda](https://docs.conda.io/en/latest/miniconda.html) Installation
+Install [Miniforge](https://conda-forge.org/download/) or Miniconda, then create the fully specified course environment from this repository's root folder:
 
-**Miniconda** is the Anaconda (company) driven minimalistic conda installer for x86-like systems. Subsequent package installations come from the anaconda channels (default or otherwise).
-
-[Download the 64 bit version](https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe)
-
-This creates a base environment with numerous packages unlike Miniconda on other OS.
-
-### Setup Environment
-
-Open `Anaconda Prompt (Miniconda3)` using windows search and run the following:
-
-```
-conda create -n ci -y
-conda activate ci
-conda install pytorch torchvision cpuonly -c pytorch -y
-conda install -c conda-forge matplotlib jupyter tqdm ipython pandas scikit-learn -y
+```powershell
+conda env create -f environment.yml
+conda activate ci8615
+python -m ipykernel install --user --name ci8615 --display-name "Python (ci8615)"
+jupyter lab
 ```
 
-## Setup: Environment, MacOS (M1)
+Use the `Python (ci8615)` kernel for every notebook. The environment definition includes the chemistry, data-science, visualization, and deep-learning dependencies used across the course.
 
-### [Miniforge](https://github.com/conda-forge/miniforge) Installation
+## Data releases
 
-**Install [Homebrew](https://brew.sh)**
+Large prepared datasets are distributed separately from the notebook repository. Each module README identifies its required files and data location. Module 1 uses the Parquet files in the course SharePoint release; see [Module 1](01_Structure_to_Boiling_Point/README.md) for setup and workflow details.
 
-- Homebrew is a community package management repository for MacOS. Useful for installing popular packages via terminal interface. 
+## Course modules
 
-**Miniforge** is the community (conda-forge) driven minimalistic conda installer. It supports both ARM-like and x86-like systems, but has limited package selection (conda-forge channel only).
-
-Open `Terminal` using spotlight search and run the following:
-
-```
-brew install wget
-wget https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-MacOSX-arm64.sh .
-zsh Mambaforge-MacOSX-arm64.sh
-```
-
-Additional Notes:
-- Follow interactive terminal prompt for Miniforge installation, take the default paths. Allow to update the zsh config file.
-- Update the shell environment via `source ~/.zshrc` or `source ~/.zsh_profile` depending on your setup. If you don't know, use the first command!
-
-### Setup Environment
-
-```
-conda create -n ci -y
-conda activate ci
-conda install pytorch torchvision -y
-conda install matplotlib jupyter tqdm ipython pandas scikit-learn -y
-```
-
-## Setup: NN Environment, Intel MacOS / Linux (e.g., Manjaro, Ubuntu, Fedora)
-
-### [Miniconda](https://docs.conda.io/en/latest/miniconda.html) Installation
-
-**Miniconda** is the Anaconda (company) driven minimalistic conda installer for x86-like systems. Subsequent package installations come from the anaconda channels (default or otherwise).
-
-Grab the appropriate version of miniconda based on your system settings. 
-
-For MACOS:
-
-- Install **[Homebrew](https://brew.sh)**. Homebrew is a community package management repository for MacOS. Useful for installing popular packages via terminal interface.  
-- Open `Terminal` using spotlight search and run the following:
-
-```
-brew install wget
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
-zsh Miniconda3-latest-MacOSX-x86_64.sh
-```
-
-For Linux:
-- Open terminal-like application and run the following:
-
-```
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-zsh Miniconda3-latest-Linux-x86_64.sh
-```
-
-Addtional Notes (MACOS and Linux):
-- Follow interactive terminal prompt for Miniconda installation, take the default paths. Allow to update the zsh or bash config file.
-- Update the shell environment: `source ~/.zshrc` or `source ~/.bashrc` depending on your setup. 
-- `zsh` can be swapped with `bash` for commands above if you're using that shell.
-
-### Setup Environment
-
-Open terminal-like application and run the following:
-
-```
-conda create -n ci -y
-conda activate ci
-conda install pytorch torchvision cpuonly -c pytorch -y
-conda install -c conda-forge matplotlib jupyter tqdm ipython pandas scikit-learn -y
-```
+- [01 — Structure to Boiling Point](01_Structure_to_Boiling_Point/README.md)
+- 02 — FTIR to Structure
+- 03 — Electrical Conductivity Prediction
 
 ### Acknowledgement
 
-We acknowledge support from the NSF Division of Graduate Education NRT Program through Award Number 2243526 for the development of the resources in this repository.
+We acknowledge support from the NSF Division of Graduate Education NRT Program through Award Number 2243526 for the development of these resources.

@@ -1,0 +1,30 @@
+name: ci8615
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  # numba 0.60, used by umap-learn, requires NumPy 2.0 or earlier.
+  - numpy=2.0
+  - pandas=2.2
+  - matplotlib
+  - seaborn
+  - jupyterlab
+  - ipykernel
+  - tqdm
+  - ipython
+  - scikit-learn
+  - pytorch
+  - torchvision
+  - tensorboard
+  - pillow
+  - rdkit
+  - umap-learn
+  - numba=0.60
+  - pyarrow
+  - requests
+  - beautifulsoup4
+  - pip
+  - pip:
+      - nistchempy==0.2.3
+      - pubchempy==1.0.4
+      - cirpy==1.0.2

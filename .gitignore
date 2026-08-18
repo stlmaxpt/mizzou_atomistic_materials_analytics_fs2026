@@ -1,0 +1,4 @@
+# Generated Jupyter state; never publish as course source.
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
