@@ -8,12 +8,12 @@ Install [Miniforge](https://conda-forge.org/download/) or Miniconda, then create
 
 ```powershell
 conda env create -f environment.yml
-conda activate ci8615
-python -m ipykernel install --user --name ci8615 --display-name "Python (ci8615)"
+conda activate ci
+python -m ipykernel install --user --name ci --display-name "Python (ci)"
 jupyter lab
 ```
 
-Use the `Python (ci8615)` kernel for every notebook. The environment definition includes the chemistry, data-science, visualization, and deep-learning dependencies used across the course.
+Use the `Python (ci)` kernel for every notebook. The environment definition includes the chemistry, data-science, visualization, and deep-learning dependencies used across the course.
 
 ## Data releases
 

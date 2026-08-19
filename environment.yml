@@ -1,4 +1,4 @@
-name: ci8615
+name: ci
 channels:
   - conda-forge
 dependencies:
