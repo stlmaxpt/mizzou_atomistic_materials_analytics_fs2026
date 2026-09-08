@@ -3,8 +3,8 @@ channels:
   - conda-forge
 dependencies:
   - python=3.12
-  # numba 0.60, used by umap-learn, requires NumPy 2.0 or earlier.
-  - numpy=2.0
+  # Numba 0.67 supports NumPy 2.2, which is required by the UMAP notebooks.
+  - numpy=2.2
   - pandas=2.2
   - matplotlib
   - seaborn
@@ -19,7 +19,7 @@ dependencies:
   - pillow
   - rdkit
   - umap-learn
-  - numba=0.60
+  - numba=0.67
   - pyarrow
   - requests
   - beautifulsoup4
