@@ -25,6 +25,6 @@ dependencies:
   - beautifulsoup4
   - pip
   - pip:
-      - nistchempy==0.2.3
+      - nistchempy==2.0.0
       - pubchempy==1.0.4
       - cirpy==1.0.2
