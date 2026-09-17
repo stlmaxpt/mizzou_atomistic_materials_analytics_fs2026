@@ -2,3 +2,9 @@
 .ipynb_checkpoints/
 __pycache__/
 *.py[cod]
+
+# PyCharm project files
+.idea/
+
+# Generated data files
+*.parquet
